@@ -15,7 +15,7 @@ namespace PersonalProjectLab
             string subtract;
             string add;
             int delta;
-            int total;
+            int balance = 500;
 
 
             Console.WriteLine("Welcome to Clayton Financial ATM's");
@@ -23,7 +23,7 @@ namespace PersonalProjectLab
 
             while (repeat)
             {
-                Console.WriteLine("Your current balance is $500. Enter W to Withdraw or D to Deposit");
+                Console.WriteLine("Your current balance is $" + balance + ". Enter W to Withdraw or D to Deposit");
                 decision = Console.ReadLine();
 
                 if (decision.Equals(withdraw))
@@ -31,8 +31,7 @@ namespace PersonalProjectLab
                     Console.WriteLine("Select the amount you would like to withdraw to the nearest whole dollar");
                     subtract = Console.ReadLine();
                     delta = int.Parse(subtract);
-                    total = 500 - delta;
-                    Console.WriteLine("Your new balance is " + total);
+                    balance -= delta;
                 }
 
                 if (decision.Equals(deposit))
@@ -40,9 +39,10 @@ namespace PersonalProjectLab
                     Console.WriteLine("Select the amount you wouls like to deposit to the nearest whole dollar");
                     add = Console.ReadLine();
                     delta = int.Parse(add);
-                    total = 500 + delta;
-                    Console.WriteLine("Your new balance is " + total);
+                    balance += delta;
                 }
+
+                Console.WriteLine("Your new balance is " + balance);
 
                 Console.WriteLine("Enter 1 to contine or 0 to quit");
                 input = Console.ReadLine();
