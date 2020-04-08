@@ -12,37 +12,33 @@ namespace PersonalProjectLab
             string deposit = "D";
             string decision;
             int quit;
-            string subtract;
-            string add;
-            int delta;
+            
             int balance = 500;
+            int amount;
 
-
+            Atm myAtm = new Atm(500);
+            
             Console.WriteLine("Welcome to Clayton Financial ATM's");
-
 
             while (repeat)
             {
                 Console.WriteLine("Your current balance is $" + balance + ". Enter W to Withdraw or D to Deposit");
                 decision = Console.ReadLine();
 
-                if (decision.Equals(withdraw))
+                if (decision == withdraw || decision == deposit)
                 {
                     Console.WriteLine("Select the amount you would like to withdraw to the nearest whole dollar");
-                    subtract = Console.ReadLine();
-                    delta = int.Parse(subtract);
-                    balance -= delta;
-                }
+                    input = Console.ReadLine();
+                    amount = int.Parse(input);
 
-                if (decision.Equals(deposit))
+                    balance = myAtm.processtransaction(decision, amount);
+                  
+                    Console.WriteLine("Your new balance is " + balance);
+                }
+                else
                 {
-                    Console.WriteLine("Select the amount you wouls like to deposit to the nearest whole dollar");
-                    add = Console.ReadLine();
-                    delta = int.Parse(add);
-                    balance += delta;
+                    Console.WriteLine("Invalid entry");
                 }
-
-                Console.WriteLine("Your new balance is " + balance);
 
                 Console.WriteLine("Enter 1 to contine or 0 to quit");
                 input = Console.ReadLine();
@@ -54,7 +50,6 @@ namespace PersonalProjectLab
                     repeat = false;
                 }
             }
-
         }
     }
 }
