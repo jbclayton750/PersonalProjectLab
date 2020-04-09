@@ -27,13 +27,13 @@ namespace PersonalProjectLab
 
                 if (decision == withdraw || decision == deposit)
                 {
-                    Console.WriteLine("Select the amount you would like to withdraw to the nearest whole dollar");
+                    Console.WriteLine("Select the amount to the nearest whole dollar");
                     input = Console.ReadLine();
                     amount = int.Parse(input);
 
                     balance = myAtm.processtransaction(decision, amount);
                   
-                    Console.WriteLine("Your new balance is " + balance);
+                    Console.WriteLine("Your new balance is $" + balance);
                 }
                 else
                 {
