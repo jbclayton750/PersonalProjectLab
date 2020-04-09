@@ -8,6 +8,7 @@ namespace PersonalProjectLabTests
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
