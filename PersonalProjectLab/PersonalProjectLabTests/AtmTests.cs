@@ -9,6 +9,8 @@ namespace PersonalProjectLabTests
         public void WithdrawExample()
         {
             //arrange
+            Atm attempt = new Atm(testWithdraw);
+
             //act
             //assert
         }
@@ -17,6 +19,8 @@ namespace PersonalProjectLabTests
         public void DepositExample()
         {
             //arrange
+            Atm attempt = new Atm(testDeposit);
+
             //act
             //assert
         }
