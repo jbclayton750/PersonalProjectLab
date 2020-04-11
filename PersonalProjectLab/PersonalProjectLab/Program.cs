@@ -31,7 +31,7 @@ namespace PersonalProjectLab
                     input = Console.ReadLine();
                     amount = int.Parse(input);
 
-                    balance = myAtm.processtransaction(decision, amount);
+                    balance = myAtm.Processtransaction(decision, amount);
                   
                     Console.WriteLine("Your new balance is $" + balance);
                 }

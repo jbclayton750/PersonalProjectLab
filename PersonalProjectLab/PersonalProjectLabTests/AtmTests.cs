@@ -12,7 +12,7 @@ namespace PersonalProjectLabTests
             //arrange
             Atm attempt = new Atm(500);
             //act
-            int balance = attempt.processtransaction("W", 50);
+            int balance = attempt.Processtransaction("W", 50);
             //assert
             Assert.AreEqual(450, balance);
         }
@@ -23,9 +23,9 @@ namespace PersonalProjectLabTests
             //arrange
             Atm attempt = new Atm(500);
             //act
-            int balance = attempt.processtransaction("D", 50);
+            int balance = attempt.Processtransaction("D", 50);
             //assert
-            Assert.AreEqual(450, balance);
+            Assert.AreEqual(550, balance);
         }
     }
 }

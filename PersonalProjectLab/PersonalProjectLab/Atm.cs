@@ -8,7 +8,7 @@ namespace PersonalProjectLab
         {
             _balance = startingbalance;
         }
-        public int processtransaction(string transactiontype, int transactionamount)
+        public int Processtransaction(string transactiontype, int transactionamount)
         {
             string withdraw = "W";
             string deposit = "D";
